@@ -5,55 +5,60 @@
 #include <string>
 #include <fstream>
 #include <exception>
-#include "nameClass.h"
+#include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
+#include <exception>
+//#include "nameClass.h"
 //#include "runGame.cpp"
 
 using namespace std;
 
-class DoSomething{
-	//access specifier is... private vs public etc
-	public:
-		//constructorrrr
-		DoSomething(string passedString){
-			setName(passedString);
-		}
+void runGame();
 
-		DoSomething(string first, string last){
-			setFirstAndLast(first, last);
-		}
-
-		void setName(string x){
-			name = x;
-		}
-
-		void setFirstAndLast(string x, string y){
-			name = x + " " + y;
-		}
-
-		string getName(){
-			return name;
-		}
-
-	private:
-		string name;
-
-};
-
-
-int main(){
+int main(int argc, char* argv[]){
 
 	//"Get the ball rolling" function--haha
-	DoSomething dsObj("LuckyBuckyRoberts");
+	
+	cout << "argc = " << argc << endl;
+    
+    for(int i = 0; i < argc; i++)
+    	{
+    	cout << "argv[" << i << "] = " << argv[i] << endl;
+		}
 
-	DoSomething sixtytwo("This is the SEcond one", "And this one too");
+	runGame();
 
-	//dsObj.setName("Testy Man");
-	cout << dsObj.getName() << endl;
-	cout << sixtytwo.getName() << endl;
-
-
-	nameClass testName;
 
     return 0;
 }
 
+
+void runGame(){
+
+	cout << "Hello" << endl;
+
+	string levelOfVerbosity = "null";
+
+	if(levelOfVerbosity == "vlow"){
+		cout << "vlow" << endl;
+		//call sort.vlow
+		}
+
+	else if(levelOfVerbosity == "vmed"){
+			cout << "vmed" << endl;
+			//call sort.vmed
+		}
+
+	else if(levelOfVerbosity == "vhigh"){
+			cout << "vhigh" << endl;
+			//call sort.vhigh
+		}
+
+	else{
+			cout << "Incorrect Verbosity . . ." << endl;
+			cout << "Please run again with vlow, vmed, or vhigh." << endl;
+		}
+
+}
