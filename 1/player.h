@@ -13,13 +13,11 @@ class player
         std::string getCodeName() const;
         int getCodeNumber();
         int getTotalPoints();
-        void tags(int tags, std::string taggedName, int tagLocation, bool didNotScore);
-        void displayTags();
-        int totalHits();
+        void tags(int tags, std::string taggedName, int tagLocation);
         int getTotalHits();
-        int totalPoints; //probably should be private
+        //void displayTags(); Used for testing high verbosity
 
-    //private:
+    	//private: These should probably be private, but things happen.
         int codeNumber;
         std::string codeName;
         std::vector<int> tagNumberList;
@@ -27,8 +25,7 @@ class player
         std::vector<std::string> tagNameList;
         std::vector<int> numberOfHits;
         int costOfPoints[5];
-
-
+        int totalPoints;
 };
 
 

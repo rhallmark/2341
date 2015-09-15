@@ -13,36 +13,39 @@
 //Header File is where we put all of a classes function prototypes and variable declarations
 class inAndOut{
 
-	public:
-		inAndOut();
-		void setFileName(std::string fileName);
-		std::string getFileName();
-		void readPlayers();
-		void readMatch();
+    public:
+        inAndOut();
+        void setFileName(std::string fileName);
+        std::string getFileName();
+        void readPlayers();
+        void readMatch();
+        encounter * getEncounterPtr();
+        player * getPlayerPtr();
+        void sortPlayerList();
+        int getEncounterListSize();
+        int getPlayerListSize();
+        int doSomeMath();
+        std::string getTeamName();
+        std::string getNumberOfPlayers();
+        std::string getBestScorer();
+        int getBestScore();
+
+        /* Testing
 		void displayPlayers();
-		void displayMatch();
-		encounter * getEncounterPtr();
-		player * getPlayerPtr();
-		void sortPlayerList();
-		int getEncounterListSize();
-		int getPlayerListSize();
-		int doSomeMath();
-		std::string getTeamName();
-		std::string getNumberOfPlayers();
-		std::string getBestScorer();
-		int getBestScore();
+        void displayMatch();
+        */
 
-	protected:
+    protected:
 
 
-	private:
-		std::string nameOfFile;
-		std::vector<player> playerList;
-		std::vector<encounter> encounterList;
-		int teamTotalScore;
-		std::string teamName;
-		std::string numberOfPlayers;
-		int bestScorerLocation;
+    private:
+        std::string nameOfFile;
+        std::vector<player> playerList;
+        std::vector<encounter> encounterList;
+        int teamTotalScore;
+        std::string teamName;
+        std::string numberOfPlayers;
+        int bestScorerLocation;
 };
 
 
