@@ -1,0 +1,18 @@
+algorithm: 15
+binary tree: 15
+analysis: 15
+heap: 15
+binary search tree: 1
+analysis: 1
+complexity: 1
+algorithm: 1
+2-3 tree: 1
+tree: 5
+b+ tree: 5
+Binary Tree: 5
+graph: 8
+clique: 8
+Tree: 8
+tree: 5
+full binary tree: 5
+complete binary tree: 5
